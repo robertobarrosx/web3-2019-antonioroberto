@@ -1,0 +1,255 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+    background-color: lightblue;
+}
+
+.full-page {
+    position: relative;
+    height: 90vh;
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.wrapper {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+}
+
+#fab {
+    display: none;
+}
+
+#fab+label {
+    height: 40px;
+    width: 40px;
+    color: white;
+    border-radius: 50%;
+    background-color: tomato;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: transform .5s;
+    transition: transform .5s;
+    transform: rotate(45deg);
+}
+
+#fab:checked+label {
+    transform: rotate(0deg);
+}
+
+#fab~a {
+    text-decoration: none;
+}
+
+ul {
+    z-index: 0;
+}
+
+.button-collapse {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    list-style: none;
+}
+
+.button-collapse {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    color: white;
+    -webkit-transition: right 0.5s, bottom 0.5s, transform .5s, opacity .5s;
+    transition: right 0.5s, bottom 0.5s, transform .5s, opacity .5s;
+    opacity: 0;
+}
+
+#fab:checked~.button-collapse {
+    opacity: 1;
+}
+
+#fab~#first-button {
+    background-color: rebeccapurple;
+}
+
+#fab:checked~#first-button {
+    bottom: 70px;
+    transform: rotate(360deg);
+    /*animation: bounce-first 1s;*/
+}
+
+#fab~#second-button {
+    background-color: yellowgreen;
+}
+
+#fab:checked~#second-button {
+    right: 50px;
+    bottom: 50px;
+    transform: rotate(360deg);
+    /*animation: bounce-second 1.4s;*/
+    /*-webkit-animation-delay: 50ms;
+      animation-delay: 50ms;*/
+}
+
+#fab~#third-button {
+    background-color: teal;
+}
+
+#fab:checked~#third-button {
+    right: 70px;
+    transform: rotate(360deg);
+    /*background-color: teal;*/
+    /*animation: bounce-third 1.5s;*/
+    /*-webkit-animation-delay: 100ms;
+      animation-delay: 100ms;*/
+}
+
+
+/*
+  @-webkit-keyframes bounce-first {
+      0% {
+          bottom: 0px;
+      }
+      20% {
+          bottom: 80px;
+      }
+      40% {
+          bottom: 60px
+      }
+      60% {
+          bottom: 75px;
+      }
+      80% {
+          bottom: 65px
+      }
+      100% {
+          bottom: 70px;
+      }
+  }
+  
+  @keyframes bounce-first {
+      0% {
+          bottom: 0px;
+      }
+      20% {
+          bottom: 80px;
+      }
+      40% {
+          bottom: 60px
+      }
+      60% {
+          bottom: 75px;
+      }
+      80% {
+          bottom: 65px
+      }
+      100% {
+          bottom: 70px;
+      }
+  }
+  
+  @-webkit-keyframes bounce-second {
+      0% {
+          bottom: 0px;
+          right: 0px;
+      }
+      20% {
+          bottom: 60px;
+          right: 60px;
+      }
+      40% {
+          bottom: 40px;
+          right: 40px;
+      }
+      60% {
+          bottom: 55px;
+          right: 55px;
+      }
+      80% {
+          bottom: 45px;
+          right: 45px;
+      }
+      100% {
+          bottom: 50px;
+          right: 50px;
+      }
+  }
+  
+  @keyframes bounce-second {
+      0% {
+          bottom: 0px;
+          right: 0px;
+      }
+      20% {
+          bottom: 60px;
+          right: 60px;
+      }
+      40% {
+          bottom: 40px;
+          right: 40px;
+      }
+      60% {
+          bottom: 55px;
+          right: 55px;
+      }
+      80% {
+          bottom: 45px;
+          right: 45px;
+      }
+      100% {
+          bottom: 50px;
+          right: 50px;
+      }
+  }
+  
+  @-webkit-keyframes bounce-third {
+      0% {
+          right: 0px;
+      }
+      20% {
+          right: 80px;
+      }
+      40% {
+          right: 60px
+      }
+      60% {
+          right: 75px;
+      }
+      80% {
+          right: 65px
+      }
+      100% {
+          right: 70px;
+      }
+  }
+  
+  @keyframes bounce-third {
+      0% {
+          right: 0px;
+      }
+      20% {
+          right: 80px;
+      }
+      40% {
+          right: 60px
+      }
+      60% {
+          right: 75px;
+      }
+      80% {
+          right: 65px
+      }
+      100% {
+          right: 70px;
+      }
+  }*/

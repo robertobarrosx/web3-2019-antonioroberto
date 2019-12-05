@@ -1,0 +1,2 @@
+class Testament < ApplicationRecord
+end

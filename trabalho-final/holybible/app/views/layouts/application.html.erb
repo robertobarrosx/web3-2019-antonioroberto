@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Holybible</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  </head>
+
+  <body class="bg-dark">
+    
+         	
+     
+  <div class="container" ng-app="tabApp">
+  <div class="row " ng-controller="TabController">
+  	<div class="col-md-2 ">
+  		<ul class="nav nav-pills nav-stacked ">
+          <% if user_signed_in? %>
+          <li ng-class="">
+            <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+          </li>
+          <% else %>
+            <li ng-class="">
+              <%= link_to new_user_session_path do %>
+                Sign in
+              <% end %>
+            </li>
+        <% end %>
+         <% if user_signed_in? %>
+        <li ng-class="">        
+          <a class="nav-link" href="/manage/ministry">Gerenciar Ministrações</a>
+        </li>
+        <li ng-class="">
+          <a class="nav-link" href="/manage/">Dashboard</a>
+        </li>
+      <% end %>
+    
+        
+          
+       	<li ng-class="">
+          	<a href="/" data-no-turbolin ng-click="">Home</a>
+       	</li>
+        
+
+         
+     	</ul>
+  	</div>
+    <div class="col-md-8">
+  		<div class="jumbotron">
+       	<%= yield %>
+     	</div>
+  	</div>
+  </div>
+</div>
+</html>
+
+
+

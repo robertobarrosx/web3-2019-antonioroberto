@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @ministry.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ministry.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @ministry.picture %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @ministry.text %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @ministry.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ministry.user_id %>
+</p>
+
+<p>
+  <strong>Church:</strong>
+  <%= @ministry.church_id %>
+</p>
+
+<%= link_to 'Edit', edit_ministry_path(@ministry) %> |
+<%= link_to 'Back', ministries_path %>

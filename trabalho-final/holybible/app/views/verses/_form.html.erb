@@ -1,0 +1,47 @@
+<%= form_with(model: verse, local: true) do |form| %>
+  <% if verse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(verse.errors.count, "error") %> prohibited this verse from being saved:</h2>
+
+      <ul>
+        <% verse.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :version %>
+    <%= form.text_field :version %>
+  </div>
+
+  <div class="field">
+    <%= form.label :testament_id %>
+    <%= form.text_field :testament_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :book_id %>
+    <%= form.text_field :book_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :chapter %>
+    <%= form.number_field :chapter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :verse %>
+    <%= form.number_field :verse %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_area :text %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

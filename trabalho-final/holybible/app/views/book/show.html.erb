@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+
+<table>
+  
+<h1> <%=@Testament.each do |testamento| %>
+
+    <%= testamento.name %>
+    <% break %> 
+<% end %></h1>
+<h2>
+ <%=@book.each do |book| %>
+      <%= book.name %>
+  <% break %> 
+<% end %>
+</h2>
+  <tbody>
+    <% @verses.each do |verse| %>
+      <%if verse.verse == 1%>
+      </br>
+       <strong style="font-size: 40px;"><%= verse.chapter %>.</strong>
+      <% end %>
+      <strong><%= verse.verse %></strong>
+                                        <%= verse.text %>
+       
+     
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

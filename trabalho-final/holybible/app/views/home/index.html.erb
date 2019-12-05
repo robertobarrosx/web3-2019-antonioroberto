@@ -1,0 +1,36 @@
+<!--TABS-->
+<div class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" data-no-turbolink data-toggle="tab" href="#old">Velho testamento</a></li>
+      <li class="nav-item">
+        <a class="nav-link" data-no-turbolink data-toggle="tab" href="#new">Novo Testamento</a></li>
+    </ul>
+</div><br>
+<!--END TABS-->
+
+
+<!--BOOKS-->
+        <% @testaments.each do |testament| %>
+            <%if testament.id == 1%>
+                <div class="tab-pane container" id="old">
+            <% end %>
+            <%if testament.id == 2%>
+                <div class="tab-pane container" id="new">
+            <% end %>
+                    <div class="list-group">
+                    <a class="list-group-item list-group-item-action active text-white">
+                        <%= testament.name %>
+                    </a>
+                    <%@all_books.each do |book|%>
+                        <%if book.testament_id == testament.id%>
+                            <a href="/book/<%= book.id %>" class="list-group-item list-group-item-action text-dark"><%= book.name %><span class="badge badge-primary badge-pill"><%= book.id %></span></a>
+                        <% end %>
+                    <% end %>    
+                    </div>
+                </div>
+        <% end %>
+        
+     
+      <!--WORDS-->   
+  </div>

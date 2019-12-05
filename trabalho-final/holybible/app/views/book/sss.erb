@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Book:</strong>
+  <%= @verse.book_id %>
+</p>
+
+<p>
+  <strong>Chapter:</strong>
+  <%= @verse.chapter %>
+</p>
+
+<p>
+  <strong>Verse:</strong>
+  <%= @verse.verse %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @verse.text %>
+</p>
+
+<%= link_to 'Edit', edit_verse_path(@verse) %> |
+<%= link_to 'Back', verses_path %>
